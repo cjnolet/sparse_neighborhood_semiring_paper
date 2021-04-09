@@ -19,15 +19,12 @@ del a
 from cuml.feature_extraction.text import TfidfTransformer
 c = TfidfTransformer().fit_transform(b).get()
 
-
 if __name__ == "__main__":
-  print("Running nearest neighors")
   from sklearn.neighbors import NearestNeighbors
 
-  for m in ["manhattan"]:
-  
-  
-    nn = NearestNeighbors(n_neighbors=5, metric=m, n_jobs=-1)#, verbose=logger.level_debug, algo_params={'batch_size_index':40000, 'batch_size_query':40000})
+  for m in ["cosine", "euclidean", "manhattan"]:
+    
+    nn = NearestNeighbors(n_neighbors=5, metric=m, n_jobs=-1)
     nn.fit(c)
 
     import time
