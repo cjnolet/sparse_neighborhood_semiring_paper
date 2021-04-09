@@ -18,7 +18,7 @@ git clone --single-branch --branch semiring_primitives_optim git@github.com:cjno
 
 3. Download the datsets and place in a directory `datasets` in the root of this repository
   - The MovieLense 20M Dataset: https://grouplens.org/datasets/movielens/
-  - NY Times BoW Dataset: https://archive.ics.uci.edu/ml/datasets/bag+of+words
+  - NY Times BoW Dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/bag-of-words/docword.nytimes.txt.gz
   - SEC EDGAR Company names Dataset: https://www.kaggle.com/dattapiy/sec-edgar-companies-list
   - scRNA Dataset: https://rapids-single-cell-examples.s3.us-east-2.amazonaws.com/krasnow_hlca_10x.sparse.h5ad
 
