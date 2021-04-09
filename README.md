@@ -5,6 +5,7 @@ This repository contains artifacts and reproducibility information for the paper
 The following steps should produce benchmarks of our optimized GPU semirings implementation:
 
 1. Clone this repository
+
 2.Build and install RAPIDS cuML, which can be done through Anaconda. The instructions to build and install cuML are located [here](https://github.com/rapidsai/cuml/blob/branch-0.19/BUILD.md).
 
 You will need to build cuML by cloning the following two branches:
