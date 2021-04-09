@@ -28,29 +28,14 @@ class StringMatcher:
         X_gt = self.vec.transform(self.ground_truth[self.col])
         X = self.vec.transform(names_to_match[self.col])
 
-        import cupy
-        b = cupy.diff(X_gt.indptr)
-
-        print(str(b))
-
-        print("density: %s" % ((X_gt.nnz / (X_gt.shape[0] * X_gt.shape[1])) * 100))
-
-        print("max %s" % cupy.max(b))
-        print("min %s" % cupy.min(b))
-
-        print("shape: %s" % str(X_gt.shape))
-
         import time
 
-
-        nn = NearestNeighbors(n_neighbors=self.topk, metric=m)#, algo_params={"batch_size_index": 40000, "batch_size_query":40000})
+        nn = NearestNeighbors(n_neighbors=self.topk, metric=m)
         nn.fit(X_gt)
         
         s = time.time()
         distances, indices = nn.kneighbors(X)
         print("%s Kneighors time: %s" % (m, (time.time() - s)))
-
-        return self.get_matches_df(distances, indices, names_to_match[self.col].to_array())
 
 import time
 
@@ -58,26 +43,14 @@ gt_df = cudf.read_csv("../datasets/sec__edgar_company_info.csv")
 
 sm = StringMatcher(gt_df, col="Company Name", ngram_range=(1, 2), topk=5, lower_bound=0.5)
 
-names_to_match = gt_df#[gt_df["Line Number"] % 6 == 0].reset_index(drop=True)
+names_to_match = gt_df
 
 s = time.time()
 
-for m in [#"cosine", "euclidean", 
-          #"manhattan", 
-          #"canberra", 
-          #"jaccard", 
-          #"chebyshev", 
-          #"hamming", 
-          #"jensenshannon", 
-          "kl_divergence", 
-          #"hellinger", 
-          #"russelrao",
+for m in ["cosine", "euclidean", "manhattan", "canberra", 
+          "jaccard", "chebyshev", "hamming", "jensenshannon", 
+          "kl_divergence", "hellinger", "russelrao", "dice",
+          "minkowski", "correlation"
           ]:
   res_df = sm.match(names_to_match, m=m)
-
-  print("Time: %s" % (time.time() - s))
-
-ground_truth = gt_df#[gt_df["Line Number"] % 6 != 0].reset_index(drop=True)
-
-print(res_df.head())
 

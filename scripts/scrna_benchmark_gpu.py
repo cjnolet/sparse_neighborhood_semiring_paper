@@ -11,7 +11,7 @@ import time
 
 for m in ["cosine", "euclidean", "manhattan", "canberra", "jaccard", 
           "chebyshev", "hamming", "jensenshannon", "kl_divergence", 
-          "hellinger", "russelrao", "dice", "minkowski"]:
+          "hellinger", "russelrao", "dice", "minkowski", "correlation"]:
   nn = NearestNeighbors(n_neighbors=10, metric=m)
   nn.fit(adata.X)
 

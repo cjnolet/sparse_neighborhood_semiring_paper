@@ -30,15 +30,12 @@ class StringMatcher:
 
         import time
 
-
-        nn = NearestNeighbors(n_neighbors=self.topk, metric=m, n_jobs=-1)#, algo_params={"batch_size_index": 40000, "batch_size_query":40000})
+        nn = NearestNeighbors(n_neighbors=self.topk, metric=m, n_jobs=-1)
         nn.fit(X_gt)
         
         s = time.time()
         distances, indices = nn.kneighbors(X)
         print("%s Kneighors time: %s" % (m, (time.time() - s)))
-
-        return self.get_matches_df(distances, indices, names_to_match[self.col].to_array())
 
 import time
 
@@ -46,18 +43,10 @@ gt_df = cudf.read_csv("../datasets/sec__edgar_company_info.csv")
 
 sm = StringMatcher(gt_df, col="Company Name", ngram_range=(1, 2), topk=5, lower_bound=0.5)
 
-names_to_match = gt_df#[gt_df["Line Number"] % 6 == 0].reset_index(drop=True)
+names_to_match = gt_df
 
 s = time.time()
 
-for m in ["euclidean", "manhattan"]:
-  
-  print("Running metric %s" % m)
-  res_df = sm.match(names_to_match, m = m)
-
-  print("%s Time: %s" % (m, (time.time() - s)))
-
-#ground_truth = gt_df[gt_df["Line Number"] % 6 != 0].reset_index(drop=True)
-
-#print(res_df.head())
+for m in ["cosine", "euclidean", "manhattan"]:
+  sm.match(names_to_match, m = m)
 

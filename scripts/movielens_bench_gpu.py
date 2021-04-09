@@ -12,7 +12,7 @@ if __name__ == "__main__":
   import time
   dists = ["cosine", "euclidean", "manhattan", "canberra", "chebyshev",
            "jaccard", "dice", "hamming", "jensenshannon", 
-           "kl_divergence", "hellinger", "russelrao", "minkowski"]
+           "kl_divergence", "hellinger", "russelrao", "minkowski", "correlation"]
 
 
   for m in dists:
