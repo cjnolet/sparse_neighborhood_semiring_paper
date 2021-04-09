@@ -16,7 +16,7 @@ git clone --single-branch --branch semiring_primitives_baseline git@github.com:c
 git clone --single-branch --branch semiring_primitives_optim git@github.com:cjnolet/cuml.git cuml_optim
 ```
 
-3. Download the datsets and place in a directory `datasets` in the root of this repository
+3. Download the datsets and place/decompress in a directory `datasets` in the root of this repository:
   - The MovieLense 20M Dataset: https://grouplens.org/datasets/movielens/
   - NY Times BoW Dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/bag-of-words/docword.nytimes.txt.gz
   - SEC EDGAR Company names Dataset: https://www.kaggle.com/dattapiy/sec-edgar-companies-list
