@@ -1,0 +1,439 @@
+SUDO_GID=10004
+MAIL=/var/mail/USER
+USER=USER
+HOME=/home/nfs/cnolet
+PS1=(cuml_019_033020_2) \u@\h \[\033[32m\]\w\[\033[33m\]$(parse_git_branch)\[\033[00m\] $ 
+SUDO_UID=10100
+LOGNAME=USER
+TERM=xterm
+USERNAME=USER
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+DISPLAY=localhost:10.0
+LANG=en_US.UTF-8
+SUDO_COMMAND=./collect_environment.sh
+SHELL=/bin/bash
+SUDO_USER=cnolet
+PWD=/raid/cnolet/workspace/Author-Kit
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.4 LTS
+Release:	18.04
+Codename:	bionic
+Linux dgx07 4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              80
+On-line CPU(s) list: 0-79
+Thread(s) per core:  2
+Core(s) per socket:  20
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               79
+Model name:          Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz
+Stepping:            1
+CPU MHz:             2537.045
+CPU max MHz:         3600.0000
+CPU min MHz:         1200.0000
+BogoMIPS:            4390.41
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            256K
+L3 cache:            51200K
+NUMA node0 CPU(s):   0-19,40-59
+NUMA node1 CPU(s):   20-39,60-79
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap intel_pt xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear flush_l1d
+MemTotal:       528263748 kB
+MemFree:        490086320 kB
+MemAvailable:   518219376 kB
+Buffers:         2202552 kB
+Cached:         24586592 kB
+SwapCached:            0 kB
+Active:         15327592 kB
+Inactive:       13976476 kB
+Active(anon):    2495196 kB
+Inactive(anon):    10624 kB
+Active(file):   12832396 kB
+Inactive(file): 13965852 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               132 kB
+Writeback:             0 kB
+AnonPages:       2513368 kB
+Mapped:           781608 kB
+Shmem:             12884 kB
+Slab:            6156920 kB
+SReclaimable:    4741828 kB
+SUnreclaim:      1415092 kB
+KernelStack:       30400 kB
+PageTables:        25616 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    264131872 kB
+Committed_AS:   24667400 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     51200 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:     6777584 kB
+DirectMap2M:    194437120 kB
+DirectMap1G:    337641472 kB
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0  55.5M  1 loop /snap/core18/1988
+loop1    7:1    0  41.2M  1 loop /snap/cvescan/281
+loop2    7:2    0  32.3M  1 loop /snap/snapd/11402
+loop3    7:3    0  55.5M  1 loop /snap/core18/1997
+loop4    7:4    0         1 loop 
+loop5    7:5    0  32.3M  1 loop /snap/snapd/11588
+loop6    7:6    0         0 loop 
+loop7    7:7    0         0 loop 
+sda      8:0    0 446.6G  0 disk 
+├─sda1   8:1    0   487M  0 part /boot/efi
+└─sda2   8:2    0 446.2G  0 part /
+sdb      8:16   0     7T  0 disk 
+└─sdb1   8:17   0     7T  0 part /raid
+Fri Apr  9 10:28:22 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.102.04   Driver Version: 450.102.04   CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:06:00.0 Off |                    0 |
+| N/A   29C    P0    41W / 300W |      0MiB / 16160MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:07:00.0 Off |                    0 |
+| N/A   29C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:0A:00.0 Off |                    0 |
+| N/A   32C    P0    42W / 300W |      0MiB / 16160MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:0B:00.0 Off |                    0 |
+| N/A   36C    P0    90W / 300W |   3174MiB / 16160MiB |    100%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   4  Tesla V100-SXM2...  On   | 00000000:85:00.0 Off |                    0 |
+| N/A   29C    P0    42W / 300W |      0MiB / 16160MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   5  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   29C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   6  Tesla V100-SXM2...  On   | 00000000:89:00.0 Off |                    0 |
+| N/A   30C    P0    41W / 300W |      0MiB / 16160MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   7  Tesla V100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   29C    P0    41W / 300W |      0MiB / 16160MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    3   N/A  N/A     70448      C   python                           3171MiB |
++-----------------------------------------------------------------------------+
+H/W path         Device           Class          Description
+============================================================
+                                  system         DGX-1 with V100 (Default string)
+/0                                bus            DGX-1 with V100
+/0/0                              memory         64KiB BIOS
+/0/36                             memory         System Memory
+/0/36/0                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/36/1                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/36/2                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/36/3                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/3c                             memory         System Memory
+/0/3c/0                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/3c/1                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/3c/2                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/3c/3                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/42                             memory         System Memory
+/0/42/0                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/42/1                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/42/2                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/42/3                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/48                             memory         System Memory
+/0/48/0                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/48/1                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/48/2                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/48/3                           memory         32GiB DIMM DDR4 Synchronous 2400 MHz (0.4 ns)
+/0/4e                             memory         1280KiB L1 cache
+/0/4f                             memory         5MiB L2 cache
+/0/50                             memory         50MiB L3 cache
+/0/51                             processor      Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz
+/0/52                             memory         1280KiB L1 cache
+/0/53                             memory         5MiB L2 cache
+/0/54                             memory         50MiB L3 cache
+/0/55                             processor      Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz
+/0/4                              memory         
+/0/6                              memory         
+/0/100                            bridge         Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DMI2
+/0/100/1                          bridge         Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port 1
+/0/100/1/0       enp1s0f0         network        Ethernet Controller 10-Gigabit X540-AT2
+/0/100/1/0.1     enp1s0f1         network        Ethernet Controller 10-Gigabit X540-AT2
+/0/100/2                          bridge         Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port 2
+/0/100/2/0                        bridge         PLX Technology, Inc.
+/0/100/2/0/4                      bridge         PLX Technology, Inc.
+/0/100/2/0/4/0   ib0              network        MT27700 Family [ConnectX-4]
+/0/100/2/0/8                      bridge         PLX Technology, Inc.
+/0/100/2/0/8/0                    display        GV100GL [Tesla V100 SXM2 16GB]
+/0/100/2/0/c                      bridge         PLX Technology, Inc.
+/0/100/2/0/c/0                    display        GV100GL [Tesla V100 SXM2 16GB]
+/0/100/3                          bridge         Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port 3
+/0/100/3/0                        bridge         PLX Technology, Inc.
+/0/100/3/0/4                      bridge         PLX Technology, Inc.
+/0/100/3/0/4/0                    display        GV100GL [Tesla V100 SXM2 16GB]
+/0/100/3/0/8                      bridge         PLX Technology, Inc.
+/0/100/3/0/8/0                    display        GV100GL [Tesla V100 SXM2 16GB]
+/0/100/3/0/c                      bridge         PLX Technology, Inc.
+/0/100/3/0/c/0   ib1              network        MT27700 Family [ConnectX-4]
+/0/100/3/0/10                     bridge         PLX Technology, Inc.
+/0/100/3/0/11                     bridge         PLX Technology, Inc.
+/0/100/3/0/12                     bridge         PLX Technology, Inc.
+/0/100/3/0/13                     bridge         PLX Technology, Inc.
+/0/100/5                          generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Map/VTd_Misc/System Management
+/0/100/5.1                        generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D IIO Hot Plug
+/0/100/5.2                        generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D IIO RAS/Control Status/Global Errors
+/0/100/5.4                        generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D I/O APIC
+/0/100/11                         generic        C610/X99 series chipset SPSR
+/0/100/11.4                       storage        C610/X99 series chipset sSATA Controller [AHCI mode]
+/0/100/14                         bus            C610/X99 series chipset USB xHCI Host Controller
+/0/100/14/0      usb1             bus            xHCI Host Controller
+/0/100/14/0/6                     bus            Virtual Hub
+/0/100/14/0/6/4                   input          Virtual Keyboard and Mouse
+/0/100/14/0/7                     bus            USB2.0 Hub
+/0/100/14/0/8                     bus            USB2.0 Hub
+/0/100/14/1      usb2             bus            xHCI Host Controller
+/0/100/16                         communication  C610/X99 series chipset MEI Controller #1
+/0/100/16.1                       communication  C610/X99 series chipset MEI Controller #2
+/0/100/1c                         bridge         C610/X99 series chipset PCI Express Root Port #1
+/0/100/1c/0                       bridge         AST1150 PCI-to-PCI Bridge
+/0/100/1c/0/0                     display        ASPEED Graphics Family
+/0/100/1f                         bridge         C610/X99 series chipset LPC Controller
+/0/100/1f.2                       storage        C610/X99 series chipset 6-Port SATA Controller [AHCI mode]
+/0/100/1f.3                       bus            C610/X99 series chipset SMBus Controller
+/0/100/1f.6                       generic        C610/X99 series chipset Thermal Subsystem
+/0/7                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 0
+/0/8                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 0
+/0/9                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 0
+/0/a                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 1
+/0/b                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 1
+/0/c                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 1
+/0/d                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link 0/1
+/0/e                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link 0/1
+/0/f                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link 0/1
+/0/10                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link Debug
+/0/11                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/12                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/13                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/14                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/15                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/16                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/17                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/18                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/19                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/1a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/1b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/1c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/1d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/1e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/1f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/20                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/21                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/22                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/23                             generic        Intel Corporation
+/0/24                             generic        Intel Corporation
+/0/25                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/26                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/27                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/28                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/29                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/2a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/2b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/2c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R2PCIe Agent
+/0/2d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R2PCIe Agent
+/0/2e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Ubox
+/0/2f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Ubox
+/0/30                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Ubox
+/0/31                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 0
+/0/32                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 0
+/0/33                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 0 Debug
+/0/34                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 1
+/0/35                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 1
+/0/37                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 1 Debug
+/0/38                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Target Address/Thermal/RAS
+/0/39                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Target Address/Thermal/RAS
+/0/3a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel Target Address Decoder
+/0/3b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel Target Address Decoder
+/0/3d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Broadcast
+/0/3e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Global Broadcast
+/0/3f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 0 Thermal Control
+/0/40                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 1 Thermal Control
+/0/41                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 0 Error
+/0/43                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 1 Error
+/0/44                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/45                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/46                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/47                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/49                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Target Address/Thermal/RAS
+/0/4a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Target Address/Thermal/RAS
+/0/4b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Channel Target Address Decoder
+/0/4c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Channel Target Address Decoder
+/0/4d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Broadcast
+/0/56                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Global Broadcast
+/0/57                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 0 Thermal Control
+/0/58                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 1 Thermal Control
+/0/59                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 0 Error
+/0/5a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 1 Error
+/0/5b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/5c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/5d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/5e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/5f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/60                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/61                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/62                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/63                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/64                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/65                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/1                              bridge         Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port 1
+/0/1/0           scsi4            storage        MegaRAID SAS-3 3108 [Invader]
+/0/1/0/0.8.0                      generic        DGX-1
+/0/1/0/2.0.0     /dev/sda         disk           479GB MRROMB
+/0/1/0/2.0.0/1   /dev/sda1        volume         486MiB Windows FAT volume
+/0/1/0/2.0.0/2   /dev/sda2        volume         446GiB EXT4 volume
+/0/1/0/2.1.0     /dev/sdb         disk           7679GB MRROMB
+/0/1/0/2.1.0/1   /dev/sdb1        volume         7151GiB EXT4 volume
+/0/2                              bridge         Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port 2
+/0/2/0                            bridge         PLX Technology, Inc.
+/0/2/0/4                          bridge         PLX Technology, Inc.
+/0/2/0/4/0       ib2              network        MT27700 Family [ConnectX-4]
+/0/2/0/8                          bridge         PLX Technology, Inc.
+/0/2/0/8/0                        display        GV100GL [Tesla V100 SXM2 16GB]
+/0/2/0/c                          bridge         PLX Technology, Inc.
+/0/2/0/c/0                        display        GV100GL [Tesla V100 SXM2 16GB]
+/0/3                              bridge         Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D PCI Express Root Port 3
+/0/3/0                            bridge         PLX Technology, Inc.
+/0/3/0/4                          bridge         PLX Technology, Inc.
+/0/3/0/4/0                        display        GV100GL [Tesla V100 SXM2 16GB]
+/0/3/0/8                          bridge         PLX Technology, Inc.
+/0/3/0/8/0                        display        GV100GL [Tesla V100 SXM2 16GB]
+/0/3/0/c                          bridge         PLX Technology, Inc.
+/0/3/0/c/0       ib3              network        MT27700 Family [ConnectX-4]
+/0/3/0/10                         bridge         PLX Technology, Inc.
+/0/3/0/11                         bridge         PLX Technology, Inc.
+/0/3/0/12                         bridge         PLX Technology, Inc.
+/0/3/0/13                         bridge         PLX Technology, Inc.
+/0/5                              generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Map/VTd_Misc/System Management
+/0/5.1                            generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D IIO Hot Plug
+/0/5.2                            generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D IIO RAS/Control Status/Global Errors
+/0/5.4                            generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D I/O APIC
+/0/66                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 0
+/0/67                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 0
+/0/68                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 0
+/0/69                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 1
+/0/6a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 1
+/0/6b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D QPI Link 1
+/0/6c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link 0/1
+/0/6d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link 0/1
+/0/6e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link 0/1
+/0/6f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R3 QPI Link Debug
+/0/70                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/71                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/72                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/73                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/74                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/75                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/76                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/77                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/78                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/79                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/7a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/7b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/7c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/7d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/7e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/7f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/80                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/81                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/82                             generic        Intel Corporation
+/0/83                             generic        Intel Corporation
+/0/84                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/85                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/86                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/87                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/88                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/89                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/8a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Caching Agent
+/0/8b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R2PCIe Agent
+/0/8c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D R2PCIe Agent
+/0/8d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Ubox
+/0/8e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Ubox
+/0/8f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Ubox
+/0/90                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 0
+/0/91                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 0
+/0/92                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 0 Debug
+/0/93                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 1
+/0/94                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 1
+/0/95                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Home Agent 1 Debug
+/0/96                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Target Address/Thermal/RAS
+/0/97                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Target Address/Thermal/RAS
+/0/98                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel Target Address Decoder
+/0/99                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel Target Address Decoder
+/0/9a                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Broadcast
+/0/9b                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Global Broadcast
+/0/9c                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 0 Thermal Control
+/0/9d                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 1 Thermal Control
+/0/9e                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 0 Error
+/0/9f                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 0 - Channel 1 Error
+/0/a0                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/a1                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/a2                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/a3                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 0/1 Interface
+/0/a4                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Target Address/Thermal/RAS
+/0/a5                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Target Address/Thermal/RAS
+/0/a6                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Channel Target Address Decoder
+/0/a7                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Channel Target Address Decoder
+/0/a8                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Broadcast
+/0/a9                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Global Broadcast
+/0/aa                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 0 Thermal Control
+/0/ab                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 1 Thermal Control
+/0/ac                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 0 Error
+/0/ad                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Memory Controller 1 - Channel 1 Error
+/0/ae                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/af                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/b0                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/b1                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D DDRIO Channel 2/3 Interface
+/0/b2                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/b3                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/b4                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/b5                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/b6                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/b7                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/0/b8                             generic        Xeon E7 v4/Xeon E5 v4/Xeon E3 v4/Xeon D Power Control Unit
+/1               docker0          network        Ethernet interface
+/2               br-a80e3c01e56c  network        Ethernet interface
+/3               veth45b063d      network        Ethernet interface
