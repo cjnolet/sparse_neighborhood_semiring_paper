@@ -2,7 +2,7 @@
 
 This repository contains artifacts and reproducibility information for the paper "Semiring Primitives for Sparse Neighborhood Methods on the GPU"
 
-The following steps should produce benchmarks of our optimized GPU semirings implementation:
+The following steps should produce benchmarks in the paper.
 
 1. Clone this repository
 
@@ -22,4 +22,6 @@ git clone --single-branch --branch semiring_primitives_optim git@github.com:cjno
   - [SEC EDGAR Company Names Dataset](https://www.kaggle.com/dattapiy/sec-edgar-companies-list)
   - [scRNA 70k Lung Cell Dataset](https://rapids-single-cell-examples.s3.us-east-2.amazonaws.com/krasnow_hlca_10x.sparse.h5ad)
 
-4. The scripts provided in the `scripts` directory of this repository should execute very simple and straightforward benchmarks using the `NearestNeighbors` estimator in Scikit-learn. The scripts that run the GPU implementations have the `_gpu` suffix. 
+4. The scripts provided in the `scripts` directory of this repository will execute the benchmarks using the `NearestNeighbors` estimator. 
+  - The scripts that run the GPU implementations have the `_gpu` suffix and execute in cuML. 
+  - All other scripts use Scikit-learn on the CPU.
