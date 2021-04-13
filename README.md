@@ -1,12 +1,12 @@
 # Reproducibility Artifacts
 
-This repository contains artifacts and reproducibility information for the paper "Semiring Primitives for Sparse Neighborhood Methods on the GPU". The benchmarks presented in the paper were performed on a DGX1 w/ V100 GPUs. We did not execute benchmarks concurrently and made sure no other scripts on the system were using CPU or GPU resurces other than those used for administration and maintenance.
+This repository contains artifacts and reproducibility information for the paper "Semiring Primitives for Sparse Neighborhood Methods on the GPU". The benchmarks presented in the paper were performed on a DGX1 w/ V100 GPUs using driver version 450.102.04 and CUDA toolkit version 11.0. We did not execute any benchmarks concurrently and made sure we had exclusive access to the system (e.g. aside from regular syste maintenance and administration, no other scripts were executing on the system that would heavily tax the CPU or GPU resources).
 
 The following steps should produce benchmarks in the paper.
 
 1. Clone this repository
 
-2. Build and install RAPIDS cuML from source using [these](https://github.com/rapidsai/cuml/blob/branch-0.19/BUILD.md#installing-from-source) instructions. Most of the dependencies can be installed through Anaconda. Our benchmark code is based on the 0.19 version of any RAPIDS packages.
+2. Build and install RAPIDS cuML from source using [these](https://github.com/rapidsai/cuml/blob/branch-0.19/BUILD.md#installing-from-source) instructions. Most of the dependencies can be installed through Anaconda by using the conda environment configuration yaml file outlined [here](https://github.com/rapidsai/cuml/blob/branch-0.19/BUILD.md#setting-up-your-build-environment). Our benchmark code is based on the 0.19 version of any RAPIDS packages.
 
 You will need to build cuML by cloning the following two branches:
 ```bash
