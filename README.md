@@ -1,6 +1,6 @@
 # Reproducibility Artifacts
 
-This repository contains artifacts and reproducibility information for the paper "Semiring Primitives for Sparse Neighborhood Methods on the GPU". The benchmarks presented in the paper were performed on a DGX1 w/ V100 GPUs using driver version 450.102.04 and CUDA toolkit version 11.0. More environment info is provided [here](https://github.com/cjnolet/sparse_neighborhood_semiring_paper/blob/main/environment_info.txt). We did not execute any benchmarks concurrently and made sure we had exclusive access to the system (e.g. aside from regular syste maintenance and administration, no other scripts were executing on the system that would heavily tax the CPU or GPU resources).
+This repository contains artifacts and reproducibility information for the paper "Semiring Primitives for Sparse Neighborhood Methods on the GPU". The benchmarks presented in the paper were performed on a DGX1 w/ V100 GPUs using driver version 450.102.04 and CUDA toolkit version 11.0. More environment info is provided [here](https://github.com/cjnolet/sparse_neighborhood_semiring_paper/blob/main/environment_info.txt). We did not execute any benchmarks concurrently and made sure we had exclusive access to the system (e.g. aside from regular system maintenance and administration, no other scripts were executing on the system that would heavily tax the CPU or GPU resources).
 
 The following steps should produce benchmarks in the paper.
 
