@@ -1,6 +1,6 @@
 # Reproducibility Artifacts
 
-This repository contains artifacts and reproducibility information for the paper "Semiring Primitives for Sparse Neighborhood Methods on the GPU"
+This repository contains artifacts and reproducibility information for the paper "Semiring Primitives for Sparse Neighborhood Methods on the GPU". The benchmarks presented in the paper were performed on a DGX1 w/ V100 GPUs. We did not execute benchmarks concurrently and made sure no other scripts on the system were using CPU or GPU resurces other than those used for administration and maintenance.
 
 The following steps should produce benchmarks in the paper.
 
