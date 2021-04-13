@@ -6,7 +6,7 @@ The following steps should produce benchmarks in the paper.
 
 1. Clone this repository
 
-2. Build and install RAPIDS cuML using [these](https://github.com/rapidsai/cuml/blob/branch-0.19/BUILD.md) instructions. Most of the dependencies can be installed through Anaconda. Our benchmark code is based on the 0.19 version of any RAPIDS packages.
+2. Build and install RAPIDS cuML from source using [these](https://github.com/rapidsai/cuml/blob/branch-0.19/BUILD.md#installing-from-source) instructions. Most of the dependencies can be installed through Anaconda. Our benchmark code is based on the 0.19 version of any RAPIDS packages.
 
 You will need to build cuML by cloning the following two branches:
 ```bash
